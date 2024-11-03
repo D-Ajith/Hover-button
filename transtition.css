@@ -1,0 +1,44 @@
+.image{
+    width: 250px;
+    height: 250px;
+    margin:100px;
+    transition: all 5s ease 0.5s;
+}
+button{
+    padding: 10px;
+    border-radius: 12px;
+    background-color:black;
+    color: white;
+}
+button.rotate:hover ~ .image{
+  transform: rotate(360deg);
+}
+button.skew:hover ~ .image{
+    transform: skew(360deg);
+    cursor: pointer;
+}
+button.translate:hover ~ .image{
+    transform: translate(200px,290px);
+}
+ button.blur:hover ~.image{
+    filter: blur(200px);
+ }
+
+button.scale:hover ~.image{
+    transform: scale(3);
+}
+ul{background-color: aqua;list-style-type:number;color: white;}
+li{
+    margin: 10px;
+    list-style: 1;
+    padding:10px;
+}
+li[data-available="true"]{
+    background-color: green;
+}
+li[ data-available="false"]{
+    background-color: red;
+}
+[data-category="Electronics"]{
+    list-style-type:upper-alpha;
+}
